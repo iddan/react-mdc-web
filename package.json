@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "material-components-web": "^0.28.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.9",
+    "@storybook/addon-links": "^3.3.9",
+    "@storybook/addons": "^3.3.9",
+    "@storybook/react": "^3.3.9",
+    "babel-core": "^6.26.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
