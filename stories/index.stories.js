@@ -7,6 +7,7 @@ import { linkTo } from "@storybook/addon-links";
 import { Welcome } from "@storybook/react/demo";
 
 import {
+  ComponentsPage,
   ArticlePage,
   H1,
   ComponentList,
@@ -20,18 +21,25 @@ import Button, { LinkButton, Icon as ButtonIcon } from "../src/Button";
 import FAB from "../src/FAB";
 
 storiesOf("React MDC Web", module).add("Components", () => (
-  <ArticlePage>
-    <H1>Components</H1>
-    <nav>
-      <ComponentList>
-        <ComponentListItem
-          icon="progress_linear"
-          title="Linear Progress"
-          description="Material Design-styled linear progress indicators."
-        />
-      </ComponentList>
-    </nav>
-  </ArticlePage>
+  <ComponentsPage>
+    <ArticlePage>
+      <H1>Components</H1>
+      <nav>
+        <ComponentList>
+          <ComponentListItem
+            icon="progress_linear"
+            title="Linear Progress"
+            description="Material Design-styled linear progress indicators."
+          />
+          <ComponentListItem
+            icon="button"
+            title="Buttons"
+            description="Material Design-styled buttons."
+          />
+        </ComponentList>
+      </nav>
+    </ArticlePage>
+  </ComponentsPage>
 ));
 
 storiesOf("Linear Progress", LinearProgress).add(

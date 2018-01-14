@@ -1,6 +1,12 @@
 import React from "react";
 import { linkTo } from "@storybook/addon-links";
 
+export const ComponentsPage = ({ children }) => (
+  <div className="page page--landing-no-drawer page--components page--platform-web">
+    {children}
+  </div>
+)
+
 export const ArticlePage = ({ children }) => (
   <div className="page__content page__flex-element">
     <article className="page__article article article--full-width">
