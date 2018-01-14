@@ -4,18 +4,17 @@ import React, { Component } from "react";
 import { MDCLinearProgress } from "@material/linear-progress/dist/mdc.linearProgress.js";
 import "@material/linear-progress/dist/mdc.linear-progress.css";
 
-function sync(mdcLinearProgress : MDCLinearProgress, props : Props) {
-  const { open, indeterminate, reverse, buffer, progress } = props
+function sync(mdcLinearProgress: MDCLinearProgress, props: Props) {
+  const { open, indeterminate, reverse, buffer, progress } = props;
   if (open) {
-    mdcLinearProgress.open()
+    mdcLinearProgress.open();
+  } else {
+    mdcLinearProgress.close();
   }
-  else {
-    mdcLinearProgress.close()
-  }
-  mdcLinearProgress.determinate = !indeterminate
-  mdcLinearProgress.buffer = buffer
-  mdcLinearProgress.progress = progress
-  mdcLinearProgress.reverse = reverse
+  mdcLinearProgress.determinate = !indeterminate;
+  mdcLinearProgress.buffer = buffer;
+  mdcLinearProgress.progress = progress;
+  mdcLinearProgress.reverse = reverse;
 }
 
 type Props = $Shape<{
@@ -23,23 +22,22 @@ type Props = $Shape<{
   indeterminate: boolean,
   reverse: boolean,
   buffer: number,
-  progress: number,
-}>
+  progress: number
+}>;
 
 export default class LinearProgress extends Component<Props> {
+  mdcLinearProgress = null;
 
-  mdcLinearProgress = null
-
-  handleRef = (ref : ?HTMLDivElement) => {
+  handleRef = (ref: ?HTMLDivElement) => {
     if (ref) {
       this.mdcLinearProgress = MDCLinearProgress.attachTo(ref);
-      sync(this.mdcLinearProgress, this.props)
+      sync(this.mdcLinearProgress, this.props);
     }
   };
 
-  componentDidUpdate(prevProps : Props) {
+  componentDidUpdate(prevProps: Props) {
     if (prevProps !== this.props && this.mdcLinearProgress) {
-      sync(this.mdcLinearProgress, this.props)
+      sync(this.mdcLinearProgress, this.props);
     }
   }
 

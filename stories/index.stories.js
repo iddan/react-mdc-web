@@ -9,6 +9,7 @@ import { Welcome } from '@storybook/react/demo';
 import './index.stories.css'
 
 import LinearProgress from '../src/LinearProgress'
+import Button, { Icon as ButtonIcon } from '../src/Button'
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <div>
@@ -21,3 +22,11 @@ storiesOf('LinearProgress', LinearProgress)
   .add('Indeterminate', () => <LinearProgress indeterminate open />)
   .add('Reverse', () => <LinearProgress indeterminate open reverse />)
   .add('Buffer', () => <LinearProgress open progress={0.3} buffer={0.5} />)
+
+storiesOf('Button', Button)
+  .add('Baseline', () => <Button>Baseline</Button>)
+  .add('Raised', () => <Button raised>Raised</Button>)
+  .add('Unelevated', () => <Button unelevated>Unelevated</Button>)
+  .add('Stroked', () => <Button stroked>Stroked</Button>)
+  .add('Dense', () => <Button dense>Dense</Button>)
+  .add('Compact', () => <Button compact>Compact</Button>)
