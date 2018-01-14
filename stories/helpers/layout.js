@@ -1,4 +1,5 @@
 import React from "react";
+import { linkTo } from "@storybook/addon-links";
 
 export const ArticlePage = ({ children }) => (
   <div className="page__content page__flex-element">

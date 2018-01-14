@@ -1,5 +1,6 @@
 // @flow
 
+import { cloneElement } from 'react'
 import type { Node } from "react";
 
 type Story = () => Node;
@@ -14,10 +15,12 @@ interface SubStories {
 
 const subStories = () : SubStories => {
   const stories = new Map();
-  let _decorator = (story, kind) => story();
+  let _decorator = (story : Story, kind : string) => story();
   return {
     render() {
-      return Array.from(stories.entries(), ([kind, story]) => _decorator(story, kind))
+      return Array.from(stories.entries()).map(([kind, story], i) => cloneElement(_decorator(story, kind), {
+        key: i,
+      }))
     },
     addDecorator(decorator) {
       const prevDecorator = _decorator;

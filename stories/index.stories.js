@@ -12,7 +12,7 @@ import {
   ComponentList,
   ComponentListItem
 } from "./helpers/layout";
-import { subStories } from "./helpers/sub-stories";
+import subStories from "./helpers/sub-stories";
 import "./index.stories.css";
 
 import LinearProgress from "../src/LinearProgress";
