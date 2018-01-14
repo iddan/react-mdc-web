@@ -1,3 +1,10 @@
-body {
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500|Roboto+Mono:400,500';
+@import 'https://material.io/components/css/app.css';
 
+.linear-progress-demo {
+  margin: 64px;
+}
+
+fieldset .mdc-linear-progress {
+  margin: 16px 0;
 }
