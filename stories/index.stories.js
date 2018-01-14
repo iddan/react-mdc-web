@@ -19,6 +19,8 @@ import "./index.stories.css";
 import LinearProgress from "../src/LinearProgress";
 import Button, { LinkButton, Icon as ButtonIcon } from "../src/Button";
 import FAB from "../src/FAB";
+import Card from "../src/Card";
+import TabBar, { Tab, Indicator } from '../src/TabBar'
 
 storiesOf("React MDC Web", module).add("Components", () => (
   <ComponentsPage>
@@ -35,6 +37,11 @@ storiesOf("React MDC Web", module).add("Components", () => (
             icon="button"
             title="Buttons"
             description="Material Design-styled buttons."
+          />
+          <ComponentListItem
+            icon="card"
+            title="Cards"
+            description="Cards for displaying content composed of different elements."
           />
         </ComponentList>
       </nav>
@@ -155,3 +162,19 @@ storiesOf("Buttons", Button)
         .render()}
     </div>
   ));
+
+storiesOf('Cards', Card)
+  .add('Card', () => (
+    <Card>
+      <p>Hello, World!</p>
+    </Card>
+  ))
+
+storiesOf('Tabs', TabBar)
+  .add('Tab Bar', () => (
+    <TabBar active={0}>
+      <Tab>One</Tab>
+      <Tab>Two</Tab>
+      <Indicator />
+    </TabBar>
+  ))
