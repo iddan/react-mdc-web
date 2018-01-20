@@ -56,7 +56,8 @@
   },
   "scripts": {
     "start": "yarn build --watch",
-    "build": "babel src --out-dir dist",
+    "lint": "eslint src",
+    "build": "flow gen-flow-files src --out-dir dist; babel src --out-dir dist",
     "storybook": "yarn start & start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy": "yarn run storybook-to-ghpages",

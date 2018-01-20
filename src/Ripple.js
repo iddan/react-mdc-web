@@ -1,6 +1,6 @@
 // @flow
 
-import { cloneElement } from 'react'
+import { cloneElement, Children } from 'react'
 import type { Element } from 'react'
 import { MDCRipple } from "@material/ripple";
 import '@material/ripple/dist/mdc.ripple.css';
@@ -16,7 +16,7 @@ function attach(ref : ?HTMLElement) {
 }
 
 const Ripple = ({ children } : Props) => (
-  cloneElement(children, {
+  cloneElement(Children.only(children), {
     ref: attach,
   })
 )

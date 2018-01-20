@@ -1,7 +1,4 @@
-// @flow
-
 import React, { cloneElement, isValidElement, Children } from "react";
-import type { Element } from "react";
 import classnames from "classnames";
 import "@material/card/dist/mdc.card.css";
 // Elevation comes after card's css to override elevation style

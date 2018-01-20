@@ -66,4 +66,6 @@ src/
 .storybook/
 stories/
 
+# Scripts
 
+scripts/

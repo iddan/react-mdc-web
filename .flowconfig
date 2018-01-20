@@ -1,0 +1,6 @@
+[ignore]
+.*/dist/.*
+.*/stories/.*
+
+[options]
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/interfaces/CSSFlowStub.js.flow'

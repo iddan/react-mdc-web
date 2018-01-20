@@ -1,11 +1,11 @@
-// @flow
-
 import { Children, cloneElement } from "react";
 import classnames from "classnames"
 import type { Node } from "react";
 import "@material/elevation/dist/mdc.elevation.css";
+import type { ClassNamed } from './util'
 
 export type Props = {
+  ...ClassNamed,
   z?:
     | 1
     | 2
@@ -32,13 +32,14 @@ export type Props = {
     | 23
     | 24,
   transition?: boolean,
-  children: Node
+  children: Node,
 };
 
-const Elevation = ({ z, transition, children }: Props) => {
+const Elevation = ({ z, transition, children, className }: Props) => {
   const child = Children.only(children);
   return cloneElement(child, {
     className: classnames(
+      className,
       child.props.className,
       "mdc-elevation",
       {

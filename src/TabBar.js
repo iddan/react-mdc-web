@@ -1,5 +1,3 @@
-// @flow
-
 import React, { PureComponent } from "react";
 import type { ComponentType } from "react";
 import classnames from "classnames"
