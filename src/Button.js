@@ -2,17 +2,18 @@
 
 import React from "react";
 import classnames from "classnames";
+import type { ClassNamed } from './util'
 import Ripple from "./Ripple";
 import Icon from "./Icon";
 import "@material/button/dist/mdc.button.css";
 
 type Props = $Shape<{
+  ...ClassNamed,
   raised: boolean,
   dense: boolean,
   unelevated: boolean,
   stroked: boolean,
   compact: boolean,
-  className: string
 }>;
 
 const createClassName = ({
@@ -79,7 +80,7 @@ export const LinkButton = ({
   </Ripple>
 );
 
-const ButtonIcon = ({ className, ...rest }: { className: string }) => (
+const ButtonIcon = ({ className, ...rest }: ClassNamed) => (
   <Icon {...rest} className={classnames(className, "mdc-button__icon")} />
 );
 

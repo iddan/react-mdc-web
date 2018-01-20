@@ -31,7 +31,7 @@ export type Props = {
     | 22
     | 23
     | 24,
-  transition?: true,
+  transition?: boolean,
   children: Node
 };
 

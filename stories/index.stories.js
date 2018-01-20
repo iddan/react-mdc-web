@@ -34,6 +34,11 @@ storiesOf("Reactive Material", module).add("Components", () => (
             title="Cards"
             description="Cards for displaying content composed of different elements."
           />
+          <ComponentListItem
+            icon="shadow"
+            title="Elevation"
+            description="Shadows and elevation as a component"
+          />
         </ComponentList>
       </nav>
     </ArticlePage>

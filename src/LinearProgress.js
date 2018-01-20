@@ -1,8 +1,10 @@
 // @flow
 
 import React, { Component } from "react";
+import classnames from 'classnames'
 import { MDCLinearProgress } from "@material/linear-progress";
 import "@material/linear-progress/dist/mdc.linear-progress.css";
+import type { ClassNamed } from './util'
 
 function sync(mdcLinearProgress: MDCLinearProgress, props: Props) {
   const { open, indeterminate, reverse, buffer, progress } = props;
@@ -18,6 +20,7 @@ function sync(mdcLinearProgress: MDCLinearProgress, props: Props) {
 }
 
 type Props = $Shape<{
+  ...ClassNamed,
   open: boolean,
   indeterminate: boolean,
   reverse: boolean,
@@ -42,10 +45,11 @@ export default class LinearProgress extends Component<Props> {
   }
 
   render() {
+    const { className } = this.props
     return (
       <div
         role="progressbar"
-        className="mdc-linear-progress"
+        className={classnames(className, "mdc-linear-progress")}
         ref={this.handleRef}
       >
         <div className="mdc-linear-progress__buffering-dots" />

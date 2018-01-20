@@ -5,8 +5,10 @@ import type { ComponentType } from "react";
 import classnames from "classnames"
 import { MDCTabBar } from "@material/tabs";
 import "@material/tabs/dist/mdc.tabs.css";
+import type { ClassNamed } from './util'
 
 type Props = {
+  ...ClassNamed,
   active: number
 };
 
@@ -39,11 +41,12 @@ export default class TabBar extends PureComponent<Props> {
   }
 
   render() {
+    const { className } = this.props
     return (
       <nav
         {...this.props}
         ref={this.handleRef}
-        className="mdc-tab-bar"
+        className={classnames(className, "mdc-tab-bar")}
         role="tablist"
       />
     );
@@ -54,7 +57,7 @@ type TabWrappedComponent =
   | string
   | ComponentType<
       $Shape<{
-        className: string,
+        ...ClassNamed,
         role: string
       }>
     >;
@@ -64,8 +67,8 @@ export const Tab = ({
   className,
   ...rest
 }: {
+  ...ClassNamed,
   Component?: TabWrappedComponent,
-  className: string
 }) => (
   <Component
     className={classnames("mdc-tab", className)}
@@ -78,6 +81,6 @@ Tab.withComponent = (WrappedComponent: TabWrappedComponent) => (
   props: Object
 ) => <Tab {...props} Component={WrappedComponent} />;
 
-export const Indicator = ({ className, ...rest }: { className: string }) => (
+export const Indicator = ({ className, ...rest }: ClassNamed) => (
   <span {...rest} className={classnames("mdc-tab-bar__indicator", className)} />
 );

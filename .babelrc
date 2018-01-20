@@ -2,12 +2,45 @@
   "presets": [
     "@babel/preset-flow",
     "@babel/preset-react",
-    ["@babel/preset-env", {
-      "modules": false
-    }]
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ]
   ],
   "plugins": [
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread"
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "babel-plugin-module-resolver",
+      {
+        "alias": {
+          "@material/animation$": "@material/animation/dist/mdc.animation.js",
+          "@material/auto-init$": "@material/auto-init/dist/mdc.autoInit.js",
+          "@material/base$": "@material/base/dist/mdc.base.js",
+          "@material/checkbox$": "@material/checkbox/dist/mdc.checkbox.js",
+          "@material/dialog$": "@material/dialog/dist/mdc.dialog.js",
+          "@material/drawer$": "@material/drawer/dist/mdc.drawer.js",
+          "@material/form-field$": "@material/form-field/dist/mdc.formField.js",
+          "@material/grid-list$": "@material/grid-list/dist/mdc.gridList.js",
+          "@material/icon-toggle$":
+            "@material/icon-toggle/dist/mdc.iconToggle.js",
+          "@material/linear-progress$":
+            "@material/linear-progress/dist/mdc.linearProgress.js",
+          "@material/menu$": "@material/menu/dist/mdc.menu.js",
+          "@material/radio$": "@material/radio/dist/mdc.radio.js",
+          "@material/ripple$": "@material/ripple/dist/mdc.ripple.js",
+          "@material/select$": "@material/select/dist/mdc.select.js",
+          "@material/selection-control$":
+            "@material/selection-control/dist/mdc.selectionControl.js",
+          "@material/slider$": "@material/slider/dist/mdc.slider.js",
+          "@material/snackbar$": "@material/snackbar/dist/mdc.snackbar.js",
+          "@material/tabs$": "@material/tabs/dist/mdc.tabs.js",
+          "@material/textfield$": "@material/textfield/dist/mdc.textfield.js",
+          "@material/toolbar$": "@material/toolbar/dist/mdc.toolbar.js"
+        }
+      }
+    ]
   ]
 }

@@ -4,17 +4,19 @@ import React from "react";
 import classnames from "classnames";
 import Ripple from "./Ripple";
 import "@material/fab/dist/mdc.fab.css";
+import type { ClassNamed } from './util'
 
 type Props = $Shape<{
+  ...ClassNamed,
   mini: boolean,
   children: string
 }>;
 
-export const FAB = ({ children, mini, ...rest }: Props) => (
+export const FAB = ({ children, mini, className, ...rest }: Props) => (
   <Ripple>
     <button
       {...rest}
-      className={classnames("mdc-fab", "material-icons", {
+      className={classnames(className, "mdc-fab", "material-icons", {
         "mdc-fab--mini": mini
       })}
     >
