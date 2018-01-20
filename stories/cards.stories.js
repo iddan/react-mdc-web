@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Card } from '..'
+import { Card } from "..";
+import "./cards.stories.css";
 
 storiesOf("Cards", Card).add("Card", () => (
   <div className="mdc-typography demo-cards">

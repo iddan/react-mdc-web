@@ -1,0 +1,25 @@
+fieldset {
+  padding: 24px;
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
+fieldset legend {
+  display: block;
+  padding: 16px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+fieldset .mdc-button {
+  margin: 16px;
+}
+
+figcaption > div {
+  margin: 8px;
+}
+
+.demo-fabs {
+  display: flex;
+  flex-wrap: wrap;
+}

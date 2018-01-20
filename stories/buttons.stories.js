@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import subStories from "./helpers/sub-stories";
-import { Button, LinkButton, ButtonIcon, FAB } from '..'
+import { Button, LinkButton, ButtonIcon, FAB } from "..";
+import "./buttons.stories.css";
 
 storiesOf("Buttons", Button)
   .add("Button", () =>

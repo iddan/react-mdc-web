@@ -17,7 +17,7 @@ function attach(ref : ?HTMLElement) {
 
 const Ripple = ({ children } : Props) => (
   cloneElement(children, {
-    ref: attach
+    ref: attach,
   })
 )
 

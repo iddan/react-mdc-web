@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import subStories from "./helpers/sub-stories";
-import { LinearProgress } from '..'
+import { LinearProgress } from "..";
+import "./linear-progress.stories.css";
 
 storiesOf("Linear Progress", LinearProgress).add(
   "Linear Progress Indicators",
