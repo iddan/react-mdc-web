@@ -14,7 +14,7 @@ interface SubStories {
 }
 
 const subStories = () : SubStories => {
-  const stories = new Map();
+  const stories : Map<string, Story> = new Map();
   let _decorator = (story : Story, kind : string) => story();
   return {
     render() {

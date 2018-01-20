@@ -1,23 +1,21 @@
 // @flow
 
-import React from "react";
-import classnames from "classnames";
+import React, { cloneElement, Children } from "react";
+import classnames from "classnames"
 import "@material/card/dist/mdc.card.css";
+// Elevation comes after card's css to override elevation style
+import Elevation from './Elevation';
+import type { Props as ElevationProps } from './Elevation'
 
-type Props = $Shape<{
-  elevation: number,
-  className: string
-}>;
+type Props = {
+  elevation: $PropertyType<ElevationProps, 'z'>,
+  className?: string
+};
 
 const Card = ({ elevation = 1, className, ...rest }: Props) => (
-  <div
-    {...rest}
-    className={classnames(
-      "mdc-card",
-      `mdc-elevation--z${elevation}`,
-      className
-    )}
-  />
+  <Elevation z={elevation}>
+    <div {...rest} className={classnames("mdc-card", className)} />
+  </Elevation>
 );
 
 export default Card;

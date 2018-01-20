@@ -1,16 +1,16 @@
 // @flow
 
 import React, { PureComponent } from "react";
-import type { ComponentType } from 'react'
-import classnames from 'classnames'
-import { MDCTabBar } from "@material/tabs/dist/mdc.tabs";
+import type { ComponentType } from "react";
+import classnames from "classnames"
+import { MDCTabBar } from "@material/tabs";
 import "@material/tabs/dist/mdc.tabs.css";
 
 type Props = {
   active: number
-}
+};
 
-function sync(mdcTabBar : MDCTabBar, { active } : Props) {
+function sync(mdcTabBar: MDCTabBar, { active }: Props) {
   if (active < 0 || active > mdcTabBar.tabs.length) {
     return;
   }
@@ -21,10 +21,10 @@ function sync(mdcTabBar : MDCTabBar, { active } : Props) {
 }
 
 export default class TabBar extends PureComponent<Props> {
-  root = null
-  mdcTabBar : MDCTabBar = null
+  root = null;
+  mdcTabBar: MDCTabBar = null;
 
-  handleRef = (root : ?HTMLElement) => {
+  handleRef = (root: ?HTMLElement) => {
     if (root) {
       this.root = root;
       this.mdcTabBar = MDCTabBar.attachTo(root);
@@ -32,7 +32,7 @@ export default class TabBar extends PureComponent<Props> {
     }
   };
 
-  componentWillReceiveProps(nextProps : Props) {
+  componentWillReceiveProps(nextProps: Props) {
     if (this.mdcTabBar) {
       sync(this.mdcTabBar, nextProps);
     }
@@ -48,23 +48,36 @@ export default class TabBar extends PureComponent<Props> {
       />
     );
   }
-};
+}
 
 type TabWrappedComponent =
   | string
-  | ComponentType<$Shape<{
-    className: string,
-    role: string,
-  }>>
+  | ComponentType<
+      $Shape<{
+        className: string,
+        role: string
+      }>
+    >;
 
-export const Tab = ({ Component = "a", className, ...rest } : { Component?: TabWrappedComponent }) => (
-  <Component className={classnames("mdc-tab", className)} role="tab" {...rest} />
+export const Tab = ({
+  Component = "a",
+  className,
+  ...rest
+}: {
+  Component?: TabWrappedComponent,
+  className: string
+}) => (
+  <Component
+    className={classnames("mdc-tab", className)}
+    role="tab"
+    {...rest}
+  />
 );
 
-Tab.withComponent = (WrappedComponent : TabWrappedComponent) => (props : Object) => (
-  <Tab {...props} Component={WrappedComponent} />
-);
+Tab.withComponent = (WrappedComponent: TabWrappedComponent) => (
+  props: Object
+) => <Tab {...props} Component={WrappedComponent} />;
 
-export const Indicator = ({ className, ...rest } : { className: string }) => (
+export const Indicator = ({ className, ...rest }: { className: string }) => (
   <span {...rest} className={classnames("mdc-tab-bar__indicator", className)} />
 );

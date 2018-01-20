@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from "react";
-import { MDCLinearProgress } from "@material/linear-progress/dist/mdc.linearProgress.js";
+import { MDCLinearProgress } from "@material/linear-progress";
 import "@material/linear-progress/dist/mdc.linear-progress.css";
 
 function sync(mdcLinearProgress: MDCLinearProgress, props: Props) {

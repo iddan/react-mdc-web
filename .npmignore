@@ -57,7 +57,13 @@ typings/
 # dotenv environment variables file
 .env
 
-# Compiled
+# Source files
 
-dist/
+src/
+
+# Storybook
+
+.storybook/
+stories/
+
 
