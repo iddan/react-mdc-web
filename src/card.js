@@ -13,7 +13,7 @@ type Props = {
   ...ClassNamed,
   elevation?: $PropertyType<ElevationProps, "z">,
   theme?: "dark"
-};
+}; 
 
 export const Card = ({ elevation = 1, theme, className, ...rest }: Props) => (
   <Elevation z={elevation}>
@@ -84,7 +84,7 @@ export const Actions = ({
       "mdc-card__actions--vertical": vertical
     })}
   >
-    {Children.map(children, child => {
+    {Children.map(children, (child : Node) => {
       if (isValidElement(child)) {
         return cloneElement(child, {
           className: classnames(child.props.className, "mdc-card__action")
