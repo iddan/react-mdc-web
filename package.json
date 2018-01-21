@@ -26,25 +26,13 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.38",
     "@babel/core": "^7.0.0-beta.38",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.38",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.38",
-    "@babel/preset-env": "^7.0.0-beta.38",
-    "@babel/preset-flow": "^7.0.0-beta.38",
-    "@babel/preset-react": "^7.0.0-beta.38",
     "@storybook/addon-links": "^3.3.10",
     "@storybook/addons": "^3.3.10",
     "@storybook/react": "^3.3.10",
     "@storybook/storybook-deployer": "^2.2.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-plugin-import-rename": "^1.0.1",
     "babel-plugin-module-resolver": "^3.0.0",
-    "babel-plugin-replace-imports": "^1.0.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^4.0.0-next.096703ab",
     "eslint": "^4.15.0",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.41.0",
@@ -56,12 +44,12 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
-    "start": "yarn build --watch",
+    "start": "NODE_ENV=development yarn build --watch",
     "lint": "eslint src",
     "build": "flow gen-flow-files src --out-dir dist; babel src --out-dir dist",
     "storybook": "yarn start & start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy": "yarn run storybook-to-ghpages",
-    "prepublish": "yarn build"
+    "prepublish": "NODE_ENV=production yarn build"
   }
 }

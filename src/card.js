@@ -84,7 +84,7 @@ export const Actions = ({
       "mdc-card__actions--vertical": vertical
     })}
   >
-    {Children.map(children, (child : Node) => {
+    {Children.map(children, (child) => {
       if (isValidElement(child)) {
         return cloneElement(child, {
           className: classnames(child.props.className, "mdc-card__action")

@@ -1,17 +1,6 @@
 {
-  "presets": [
-    "@babel/preset-flow",
-    "@babel/preset-react",
-    [
-      "@babel/preset-env",
-      {
-        "modules": false
-      }
-    ]
-  ],
+  "presets": ["react-app"],
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread",
     [
       "babel-plugin-module-resolver",
       {
