@@ -1,4 +1,6 @@
 # Reactive Material
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fiddan%2Freactive-material.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fiddan%2Freactive-material?ref=badge_shield)
+
 
 React bindings for [Material Components Web]
 
@@ -61,3 +63,7 @@ React bindings for [Material Components Web]
 [@material/elevation]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation
 [@material/card]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-card
 [@material/icon]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fiddan%2Freactive-material.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fiddan%2Freactive-material?ref=badge_large)
