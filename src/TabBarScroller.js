@@ -13,15 +13,24 @@ type Props = {
 
 export default class TabBarScroller extends PureComponent<Props> {
 
+  root: HTMLDivElement | null
   mdcTabBar: ?MDCTabBarScroller;
 
+  static defaultProps = {
+    active: 0,
+  }
+
   handleRef = (ref : ?HTMLElement) => {
-    if (ref !== null) {
-      const { tabBar } = MDCTabBarScroller.attachTo(ref);
+    this.root = ref;
+  };
+
+  componentDidMount() {
+    if (this.root) {
+      const { tabBar } = MDCTabBarScroller.attachTo(this.root);
       this.mdcTabBar = tabBar;
       this.sync(this.props);
     }
-  };
+  }
 
   sync({ active } : Props) {
     if (!this.mdcTabBar || active < 0 || active > this.mdcTabBar.tabs.length) {

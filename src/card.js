@@ -7,11 +7,10 @@ import { classNameVar } from "./util";
 import type { ClassNamed } from "./util";
 // Elevation comes after card's css to override elevation style
 import Elevation from "./Elevation";
-import type { Props as ElevationProps } from "./Elevation";
 
 type Props = {
   ...ClassNamed,
-  elevation?: $PropertyType<ElevationProps, "z">,
+  elevation?: *,
   theme?: "dark"
 }; 
 
@@ -84,7 +83,7 @@ export const Actions = ({
       "mdc-card__actions--vertical": vertical
     })}
   >
-    {Children.map(children, (child) => {
+    {Children.map(children, (child : *) => {
       if (isValidElement(child)) {
         return cloneElement(child, {
           className: classnames(child.props.className, "mdc-card__action")

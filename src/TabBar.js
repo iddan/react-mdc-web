@@ -24,6 +24,10 @@ export default class TabBar extends PureComponent<Props> {
   root = null;
   mdcTabBar: MDCTabBar = null;
 
+  static defaultProps = {
+    active: 0,
+  }
+
   handleRef = (root: ?HTMLElement) => {
     if (root) {
       this.root = root;

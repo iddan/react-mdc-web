@@ -1,6 +1,11 @@
 // @flow
 
-import * as TabBar from "./TabBar";
-import * as TabBarScroller from './TabBarScroller'
-
-export { TabBar, TabBarScroller }
+export { default as TabBar, Tab, Indicator } from "./TabBar";
+export {
+  default as TabBarScroller,
+  IndicatorBack,
+  IndicatorForward,
+  IndicatorInner,
+  ScrollFrame,
+  ScrollFrameTabs
+} from "./TabBarScroller";

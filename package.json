@@ -31,6 +31,7 @@
     "@storybook/react": "^3.3.10",
     "@storybook/storybook-deployer": "^2.2.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-plugin-module-resolver": "^3.0.0",
     "babel-preset-react-app": "^4.0.0-next.096703ab",
     "eslint": "^4.15.0",

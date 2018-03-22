@@ -39,6 +39,12 @@ storiesOf("Reactive Material", module).add("Components", () => (
             title="Elevation"
             description="Shadows and elevation as a component"
           />
+          {/** @todo use actual icon */}
+          <ComponentListItem
+            icon="tab"
+            title="Tabs"
+            description="A tabbed navigation component"
+          />
         </ComponentList>
       </nav>
     </ArticlePage>
