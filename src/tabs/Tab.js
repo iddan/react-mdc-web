@@ -1,10 +1,16 @@
 // @flow
 
 import React from "react";
+import type { ComponentType } from "react";
 import classnames from "classnames";
-import type { ClassNamed, WrappedComponent } from "../util";
+import type { ClassNamed } from "../util";
 
-type TabWrappedComponent = WrappedComponent<ClassNamed & { role: string }>;
+type TabWrappedComponent =
+  | string
+  | ComponentType<{
+      role?: string,
+      className?: string
+    }>;
 
 type Props = ClassNamed & { Component: TabWrappedComponent };
 

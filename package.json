@@ -7,7 +7,13 @@
     "name": "Iddan Aaronsohn",
     "url": "https://aniddan.com"
   },
-  "keywords": ["react", "material", "mdc", "web", "dom"],
+  "keywords": [
+    "react",
+    "material",
+    "mdc",
+    "web",
+    "dom"
+  ],
   "homepage": "https://iddan.github.io/reactive-material",
   "repository": {
     "type": "git",
