@@ -1,12 +1,19 @@
 // @flow
 
 import React, { PureComponent, Children } from "react";
+import type { Element as ReactElement } from 'react'
 import polyfill from "react-lifecycles-compat";
 import classnames from "classnames";
-import { MDCIconToggle } from "@material/icon-toggle/dist/mdc.iconToggle";
+import { MDCIconToggle } from "@material/icon-toggle";
 import shallowEqual from "fbjs/lib/shallowEqual";
-import { ClassNamed } from "./util";
+import type { ClassNamed } from "./util";
 import "@material/icon-toggle/dist/mdc.icon-toggle.css";
+
+interface ChangeEvent extends Event {
+  detail: {
+    isOn: boolean
+  }
+}
 
 type ToggleState = {
   label: string,
@@ -19,33 +26,35 @@ type Props = ClassNamed & {
   toggleOff: ToggleState,
   pressed?: boolean,
   disabled?: boolean,
+  onChange: (event : ChangeEvent) => void,
   /** Should be used instead of data-icon-inner-selector */
-  children?: React.Element<*>,
+  children?: ReactElement<*>,
 };
 
-class IconToggle extends PureComponent {
+type State = {
+  stringToggleOff: string,
+  stringToggleOn: string,
+  lastToggleOn: ToggleState,
+  lastToggleOff: ToggleState,
+};
 
-  props: Props;
-  state: {
-    stringToggleOff: string,
-    stringToggleOn: string,
-  };
+class IconToggle extends PureComponent<Props, State> {
 
   static defaultProps = {
     pressed: false
   };
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const stringToggleOn = shallowEqual(
+  static getDerivedStateFromProps(nextProps : Props, prevState : ?State) {
+    const stringToggleOn = prevState && shallowEqual(
       nextProps.toggleOn,
-      prevState && prevState.lastToggleOn
+      prevState.lastToggleOn
     )
       ? prevState.stringToggleOn
       : JSON.stringify(nextProps.toggleOn);
 
-    const stringToggleOff = shallowEqual(
+    const stringToggleOff = prevState && shallowEqual(
       nextProps.toggleOff,
-      prevState && prevState.lastToggleOff
+      prevState.lastToggleOff
     )
       ? prevState.stringToggleOff
       : JSON.stringify(nextProps.toggleOff);
@@ -59,15 +68,18 @@ class IconToggle extends PureComponent {
   }
 
   id = `icon-toggle-${Math.random().toString(32).slice(2)}`
-  root : ?HTMLElement;
+  root : HTMLElement;
 
   handleRef = (ref) => {
     this.root = ref;
   }
 
   componentDidMount() {
-    if (this.root) {
+    if (this.root) { 
       MDCIconToggle.attachTo(this.root);
+      this.root.addEventListener('MDCIconToggle:change', (event : any) => {
+        this.props.onChange(event);
+      });
     }
   }
 
