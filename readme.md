@@ -32,6 +32,7 @@ React bindings for [Material Components Web]
  - [x] tabs ('[@material/tabs]')
  - textField ('[@material/textfield]')
  - toolbar ('[@material/toolbar]')
+ - [x] typography ('[@material/typography]')
 
 ### Added
 
@@ -60,6 +61,7 @@ React bindings for [Material Components Web]
 [@material/tabs]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-tabs
 [@material/textfield]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-textfield
 [@material/toolbar]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-toolbar
+[@material/typography]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-typography
 [@material/elevation]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation
 [@material/card]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-card
 [@material/icon]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon
