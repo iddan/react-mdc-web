@@ -9,5 +9,6 @@ export { default as FAB } from "./FAB";
 export { default as Icon } from "./Icon";
 export { default as LinearProgress } from "./LinearProgress";
 export { default as Ripple } from "./Ripple";
+export { default as IconToggle } from './IconToggle'
 export { card, tabs, typography, toolbar };
 

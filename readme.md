@@ -20,7 +20,7 @@ React bindings for [Material Components Web]
  - drawer ('[@material/drawer]')
  - formField ('[@material/form-field]')
  - gridList ('[@material/grid-list]')
- - iconToggle ('[@material/icon-toggle]')
+ - [x] iconToggle ('[@material/icon-toggle]')
  - [x] linearProgress ('[@material/linear-progress]')
  - menu ('[@material/menu]')
  - radio ('[@material/radio]')

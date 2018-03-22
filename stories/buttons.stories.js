@@ -1,7 +1,9 @@
+// @flow
+
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import subStories from "./helpers/sub-stories";
-import { Button, LinkButton, ButtonIcon, FAB } from "..";
+import { Button, LinkButton, ButtonIcon, FAB, IconToggle } from "..";
 import "./buttons.stories.css";
 
 storiesOf("Buttons", Button)
@@ -72,7 +74,7 @@ storiesOf("Buttons", Button)
       .render()
   )
   .add("Floating Action Button", () => (
-    <div className=".demo-fabs mdc-typography">
+    <div className="demo-fabs mdc-typography">
       {subStories()
         .addDecorator((story, kind) => (
           <figure>
@@ -85,5 +87,32 @@ storiesOf("Buttons", Button)
         .add("FAB", () => <FAB>favorite_border</FAB>)
         .add("Mini FAB", () => <FAB mini>favorite_border</FAB>)
         .render()}
+    </div>
+  ))
+  .add('Icon Toggle Buttons', () => (
+    <div className="mdc-typography">
+    {subStories()
+      .add('Using Material Icons', ()  => (
+        <IconToggle
+          toggleOn={{ label: 'Add To Favorites', 'content': 'favorite' }}
+          toggleOff={{ label: 'Remove From Favorites', 'content': 'favorite_border' }}
+        />
+      ))
+      .add('Using Font Awesome', () => (
+        <IconToggle
+          toggleOn={{ cssClass: 'fa-star', 'label': 'Unstar this item'}}
+          toggleOff={{ cssClass: 'fa-star-o', 'label': 'Star this item'}}
+        >
+          <i className="fa fa-star" aria-hidden="true"></i>
+        </IconToggle>
+      ))
+      .add('Disabled Icons', () => (
+        <IconToggle
+          toggleOn={{ label: 'Add To Favorites', 'content': 'favorite' }}
+          toggleOff={{ label: 'Remove From Favorites', 'content': 'favorite_border' }}
+          disabled
+        />
+      ))
+      .render()}
     </div>
   ));

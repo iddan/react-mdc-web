@@ -1,6 +1,6 @@
 {
   "name": "reactive-material",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "main": "dist/index.js",
   "author": {
     "email": "mail@aniddan.com",
@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-components-web": "^0.33.0"
+    "material-components-web": "^0.33.0",
+    "react-lifecycles-compat": "^1.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.38",
