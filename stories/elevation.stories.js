@@ -12,7 +12,7 @@ storiesOf("Elevation", Elevation).add("Elevation", () => (
           <Elevation key={i} z={i}>
             <figure className="demo-surface">
               <figcaption>
-                1dp (<code>{`<Elevation z=${i} />`}</code>)
+                {i}dp (<code>{`<Elevation z=${i} />`}</code>)
               </figcaption>
             </figure>
           </Elevation>
