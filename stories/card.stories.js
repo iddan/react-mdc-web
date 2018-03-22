@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { card, Button } from "..";
+import { card, Button } from "../src";
 import firstImage from './images/1-1.jpg'
 import "./card.stories.css";
 

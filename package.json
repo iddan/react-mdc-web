@@ -1,19 +1,13 @@
 {
   "name": "reactive-material",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "main": "dist/index.js",
   "author": {
     "email": "mail@aniddan.com",
     "name": "Iddan Aaronsohn",
     "url": "https://aniddan.com"
   },
-  "keywords": [
-    "react",
-    "material",
-    "mdc",
-    "web",
-    "dom"
-  ],
+  "keywords": ["react", "material", "mdc", "web", "dom"],
   "homepage": "https://iddan.github.io/reactive-material",
   "repository": {
     "type": "git",
@@ -46,7 +40,7 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
-    "start": "NODE_ENV=development yarn build --watch",
+    "start": "NODE_ENV=development babel src --out-dir dist --watch",
     "lint": "eslint src",
     "build": "flow gen-flow-files src --out-dir dist; babel src --out-dir dist",
     "storybook": "yarn start & start-storybook -p 6006",

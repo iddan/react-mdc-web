@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Elevation from "../dist/Elevation";
+import Elevation from "../src/Elevation";
 import "./elevation.stories.css";
 
 storiesOf("Elevation", Elevation).add("Elevation", () => (

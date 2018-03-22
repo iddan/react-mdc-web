@@ -3,7 +3,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import subStories from "./helpers/sub-stories";
-import { Button, LinkButton, ButtonIcon, FAB, IconToggle } from "..";
+import { Button, LinkButton, ButtonIcon, FAB, IconToggle } from "../src";
 import "./buttons.stories.css";
 
 storiesOf("Buttons", Button)

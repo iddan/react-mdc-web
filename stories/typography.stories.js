@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { typography } from "..";
+import { typography } from "../src";
 
 const {
   Typography,
