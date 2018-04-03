@@ -39,6 +39,11 @@ storiesOf("Reactive Material", module).add("Components", () => (
             title="Elevation"
             description="Shadows and elevation as a component"
           />
+          <ComponentListItem
+            icon="text_format"
+            title="Inputs and Controls"
+            description="Form fields, checkboxes, menus, and other input components."
+          />
           {/** @todo use actual icon */}
           <ComponentListItem
             icon="tab"

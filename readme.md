@@ -1,49 +1,48 @@
 # Reactive Material
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fiddan%2Freactive-material.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fiddan%2Freactive-material?ref=badge_shield)
 
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fiddan%2Freactive-material.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fiddan%2Freactive-material?ref=badge_shield)
 
 React bindings for [Material Components Web]
 
 ### Features
 
- - [Spec][Material Web Components Catalog] complaint components
- - Clean & readable source code
- - Typed
- - Modular ([ES Modules] & Browser builds)
+* [Spec][material web components catalog] complaint components
+* Clean & readable source code
+* Typed
+* Modular ([ES Modules] & Browser builds)
 
 ### Modules
 
- * [x] for completed
+* [x] for completed
 
- - checkbox ('[@material/checkbox]')
- - dialog ('[@material/dialog]')
- - drawer ('[@material/drawer]')
- - formField ('[@material/form-field]')
- - gridList ('[@material/grid-list]')
- - [x] iconToggle ('[@material/icon-toggle]')
- - [x] linearProgress ('[@material/linear-progress]')
- - menu ('[@material/menu]')
- - radio ('[@material/radio]')
- - [x] ripple ('[@material/ripple]')
- - [x] select ('[@material/select]')
- - selectionControl ('[@material/selection-control]')
- - slider ('[@material/slider]')
- - snackbar ('[@material/snackbar]')
- - [x] tabs ('[@material/tabs]')
- - textField ('[@material/textfield]')
- - toolbar ('[@material/toolbar]')
- - [x] typography ('[@material/typography]')
+- checkbox ('[@material/checkbox]')
+- dialog ('[@material/dialog]')
+- drawer ('[@material/drawer]')
+- formField ('[@material/form-field]')
+- gridList ('[@material/grid-list]')
+- [x] iconToggle ('[@material/icon-toggle]')
+- [x] linearProgress ('[@material/linear-progress]')
+- menu ('[@material/menu]')
+- radio ('[@material/radio]')
+- [x] ripple ('[@material/ripple]')
+- [x] select ('[@material/select]')
+- selectionControl ('[@material/selection-control]')
+- slider ('[@material/slider]')
+- snackbar ('[@material/snackbar]')
+- [x] tabs ('[@material/tabs]')
+- [x] textField ('[@material/textfield]')
+- toolbar ('[@material/toolbar]')
+- [x] typography ('[@material/typography]')
 
 ### Added
 
- - Elevation ('[@material/elevation]')
- - Card ('[@material/card]')
- - Icon ('[@material/icon]')
+* Elevation ('[@material/elevation]')
+* Card ('[@material/card]')
+* Icon ('[@material/icon]')
 
-[Material Components Web]: (https://material.io/components/web/)
-[Material Web Components Catalog]: https://material.io/components/web/catalog
-[ES Modules]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
-
+[material components web]: (https://material.io/components/web/)
+[material web components catalog]: https://material.io/components/web/catalog
+[es modules]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 [@material/checkbox]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-checkbox
 [@material/dialog]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-dialog
 [@material/drawer]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-drawer
@@ -66,6 +65,6 @@ React bindings for [Material Components Web]
 [@material/card]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-card
 [@material/icon]: https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon
 
-
 ## License
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fiddan%2Freactive-material.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fiddan%2Freactive-material?ref=badge_large)
