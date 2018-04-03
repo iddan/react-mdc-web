@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import classnames from "classnames";
 import { MDCTextField } from "@material/textfield";
-import type { ClassNamed } from "./util";
+import type { ClassNamed } from "../util";
 import "@material/textfield/dist/mdc.textfield.css";
 
 type Props = {
